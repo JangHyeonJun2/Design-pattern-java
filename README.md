@@ -38,3 +38,6 @@
   - 사운드 매니저
   - 스코어 매니저
 
+##### 바로가기
+[싱글톤 문제점 파악하기](https://github.com/JangHyeonJun2/Design-pattern-java/tree/master/src/main/java/case1)
+
