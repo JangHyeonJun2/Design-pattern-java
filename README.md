@@ -40,4 +40,5 @@
 
 ##### 바로가기
 [싱글톤 문제점 파악하기](https://github.com/JangHyeonJun2/Design-pattern-java/tree/master/src/main/java/case1)
+[싱글톤 예제 보러가기](https://github.com/JangHyeonJun2/Design-pattern-java/tree/master/src/main/java/case2)
 
