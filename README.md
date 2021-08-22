@@ -120,6 +120,7 @@
 -----------------
 
  ## 빌더 패턴
+[빌더패턴 예제 바로가기](https://github.com/JangHyeonJun2/Design-pattern-java/tree/master/src/main/java/case4)
 
 ------------
 
