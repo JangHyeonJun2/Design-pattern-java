@@ -116,3 +116,42 @@
 
 ##### 바로가기
 [플라이웨이트 예제 바로가기](https://github.com/JangHyeonJun2/Design-pattern-java/tree/master/src/main/java/case3/step3)
+
+-----------------
+
+ ## 빌더 패턴
+
+------------
+
+## 옵저버 패턴
+
+- 한 객체의 상태가 바뀌면 그 객체에 의존하는 다른 객체들한테 연락이 가고 자동으로 내용이 갱신되는 방식으로 일대다(one-to-many) 의존성을 정의한다.
+
+  [<img src="https://i.postimg.cc/3JG6yFtB/2021-08-22-7-01-41.png" alt="2021-08-22-7-01-41.png" style="zoom:50%;" />
+
+  
+
+[![2021-08-22-7-03-43.png](https://i.postimg.cc/5tDLFL7B/2021-08-22-7-03-43.png)](https://postimg.cc/yJXkMgzx)
+
+
+
+### 자바 내장 옵저버 패턴 사용
+
+##### java.util.Observer 인터페이스와 java.util.Observable 클래스를 사용할 수 있다.
+
+- 자바 내장 옵저버 패턴은 푸시 방식, 풀 방식 모두 사용 가능
+
+- **java.util.Observer 인터페이스를 구현하고 java.util.Observable 객체의 addObserver() 메소드를 호출하면 옵저버 목록에 추가가 되고 deleteObserver()를 호출하면 옵저버 목록에서 제거가 된다.**
+  **연락을 돌리는 방법은 java.util.Observable를 상속받는 주제 클래스에서 setChanged() 메소드를 호출해서 객체의 상태가 바뀌었다는 것을 알린 후 notifyObservers() 또는 notifyObserver(Object arg) 메소드를 호출하면 된다. (인자값을 넣어주는 메소드는 푸시방식으로 쓰임)**
+  **옵저버 객체가 연락을 받는 방법은 update(Observable o, Object arg) 메소드를 구현하기만 하면 된다. Observable o 에는 연락을 보내는 주제 객체가 인자로 전달이 되고 Object arg에는 notifyObservers(Object arg) 메소드에서 인자로 전달된 데이터 객체가 넘어온다.**
+- 참고!!!! java.util.Observer, java.util.Observable 은 Deprecate 되었다.
+
+### 장점
+
+1. 실시간으로 한 객체의 변경사항을 다른 객체에 전파할 수 있다.
+2. 느슨한 결합으로 시스템이 유연하고 객체간의 의존성을 제거할 수 있다.
+
+### 단점
+
+1. 너무 많이 사용하게 되면, 상태 관리가 힘들 수 있습니다.
+2. 데이터 배분에 문제가 생기면 자칫 큰 문제로 이어질 수 있다.
